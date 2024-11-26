@@ -1,0 +1,13 @@
+.collapser-header {
+    cursor: pointer;
+}
+
+.collapser-header:not(.collapser-header-open) .collapser-chevron > .icon {
+    position: absolute;
+    transform: rotate(-90deg);
+
+}
+
+.collapser-content-hidden {
+    display: none;
+}
