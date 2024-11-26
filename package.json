@@ -10,8 +10,8 @@
     "react-scripts": "5.0.1"
   },
   "scripts": {
-    "start": "vite",
-    "build": "vite build",
+    "start": "vite --config config/vite.dev.js",
+    "build": "vite build --config config/vite.prod.js",
     "serve": "vite preview"
   },
   "eslintConfig": {
