@@ -1,7 +1,6 @@
 {
   "name": "oknalv.github.io",
   "version": "0.1.0",
-  "homepage": ".",
   "private": true,
   "dependencies": {
     "i18next": "^23.10.0",
