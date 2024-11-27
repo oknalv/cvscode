@@ -24,7 +24,7 @@ function SkillTree({skills, titleKey, last, parentLast=[], level=0, title}) {
                                     parentLast.map(p => `${p ? "\xa0" : "│"}\xa0`)
                                 }
                                 { last ? "╰" : "├" }─
-                                { showSkills ? "┬": "─"}─
+                                { showSkills ? "┬": "─"}─○
                             </span>
                             <span
                                 className={`skills-highlight${title ? " skill-tree-title" : ""}`}
@@ -93,7 +93,7 @@ function SkillTree({skills, titleKey, last, parentLast=[], level=0, title}) {
                             level !== 0 && 
                             parentLast.map(p => `${p ? "\xa0" : "│"}\xa0`)
                         }
-                        { last ? "╰" : "├" }───
+                        { last ? "╰" : "├" }───○
                     </span>
                     &nbsp;{t(titleKey)}
                 </div>
