@@ -11,7 +11,7 @@ function Home({fontSize}) {
                 className="home-img"
             >
                 <PageImg
-                    src="/img/me.png"
+                    src="./img/me.png"
                     size={15}
                     fontSize={fontSize}
                 />

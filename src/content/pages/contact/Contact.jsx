@@ -7,7 +7,7 @@ function Contact({fontSize, theme}) {
         <div className="contact">
             <a href="https://www.linkedin.com/in/eliotblancolebrero/" target="_blank" rel="noopener noreferrer">
                 <PageImg
-                    src={`/img/linkedin.svg`}
+                    src={`./img/linkedin.svg`}
                     fontSize={fontSize}
                     size={3}
                 />
@@ -18,7 +18,7 @@ function Contact({fontSize, theme}) {
             <br />
             <a href="https://github.com/oknalv" target="_blank" rel="noopener noreferrer">
                 <PageImg
-                    src={`/img/github_${theme}.svg`}
+                    src={`./img/github_${theme}.svg`}
                     fontSize={fontSize}
                     size={3}
                 />

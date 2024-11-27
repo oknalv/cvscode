@@ -21,7 +21,7 @@ function Project({project, fontSize, theme}) {
                         <div className="project-name">
                             <PageImg
                                 size={2}
-                                src={`/img/${project.name}${project.themed ? `_${theme}` : ""}.svg`}
+                                src={`./img/${project.name}${project.themed ? `_${theme}` : ""}.svg`}
                                 fontSize={fontSize}
                             />
                             {
@@ -88,7 +88,7 @@ function Project({project, fontSize, theme}) {
                                             [...Array(project.screenshots).keys()].map((s, i) => {
                                                 return (
                                                     <PageImg
-                                                        src={`/img/${project.name}_${s}.png`}
+                                                        src={`./img/${project.name}_${s}.png`}
                                                         fontSize={fontSize}
                                                         size={10}
                                                         key={`project-${project.name}-screenshot${i}`}

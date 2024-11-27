@@ -21,7 +21,7 @@ function Skills({fontSize}) {
     return(
         <div className="skills">
             <PageImg
-                src="/img/me.png"
+                src="./img/me.png"
                 size={4}
                 fontSize={fontSize}
             />
