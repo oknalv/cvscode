@@ -11,7 +11,7 @@ function Home({fontSize}) {
                 className="home-img"
             >
                 <PageImg
-                    src="./img/me.png"
+                    src={`${import.meta.env.VITE_HOME_URL}img/me.png`}
                     size={15}
                     fontSize={fontSize}
                 />

@@ -6,7 +6,7 @@ function Header() {
     const { t } = useTranslation();
     return(
         <div className="header">
-            <img src="/img/me.png" alt="me"/> Eliot Blanco Lebrero, {t("header").toLowerCase()}
+            <img src={`${import.meta.env.VITE_HOME_URL}img/me.png`} alt="me"/> Eliot Blanco Lebrero, {t("header").toLowerCase()}
         </div>
     )
 }

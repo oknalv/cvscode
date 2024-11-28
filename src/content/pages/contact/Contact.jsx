@@ -13,7 +13,7 @@ function Contact({fontSize, theme}) {
                         <div key={`contact-${c.page}`}>
                             <a href={c.link} target="_blank" rel="noopener noreferrer">
                                 <PageImg
-                                    src={`./img/${c.page}${c.themed ? `_${theme}`: ""}.svg`}
+                                    src={`${import.meta.env.VITE_HOME_URL}img/${c.page}${c.themed ? `_${theme}`: ""}.svg`}
                                     fontSize={fontSize}
                                     size={3}
                                 />

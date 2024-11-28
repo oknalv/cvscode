@@ -21,7 +21,7 @@ function Experience({fontSize}) {
                                     e.images?.map((img, j) => {
                                         return (
                                             <PageImg
-                                                src={`./img/${img}`}
+                                                src={`${import.meta.env.VITE_HOME_URL}img/${img}`}
                                                 fontSize={fontSize}
                                                 size={3}
                                                 key={`experience${i}-img${j}`}

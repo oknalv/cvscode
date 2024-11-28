@@ -12,7 +12,7 @@ function Skills({fontSize}) {
     return(
         <div className="skills">
             <PageImg
-                src="./img/me.png"
+                    src={`${import.meta.env.VITE_HOME_URL}img/me.png`}
                 size={4}
                 fontSize={fontSize}
             />
