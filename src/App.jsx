@@ -5,7 +5,8 @@ import Bar from "./bar/Bar";
 import { useTranslation } from "react-i18next";
 import Content from "./content/Content";
 
-function App() {
+
+function App({isMobile}) {
     const [currentPage, setCurrentPage] = useState(null);
     const [tabHistory, setTabHistory] = useState([]);
     const [openPages, setOpenPages] = useState([]);
@@ -13,7 +14,14 @@ function App() {
     const { i18n } = useTranslation();
 
     useEffect(() => {
-        selectPage("home")
+        selectPage("home");
+        if(isMobile) {
+            setTimeout(() => {
+                setCurrentPage("warning");
+                setOpenPages(["home", "warning"]);
+                setTabHistory(["home", "warning"])
+            }, 100);
+        }
     }, [])
 
     useEffect(() => {
@@ -30,7 +38,7 @@ function App() {
         }
         setCurrentPage(page);
         if(tabHistory.at(-1) !== page) {
-            setTabHistory([...tabHistory, page])
+            setTabHistory([...tabHistory, page]);
         }
     }
 

@@ -6,6 +6,7 @@ import Experience from "./experience/Experience";
 import Skills from "./skills/Skills";
 import Contact from "./contact/Contact";
 import Projects from "./projects/Projects";
+import Warning from "./warning/Warning";
 import Page from "./Page";
 
 const availablePages = {
@@ -14,7 +15,8 @@ const availablePages = {
     experience: Experience,
     skills: Skills,
     contact: Contact,
-    projects: Projects
+    projects: Projects,
+    warning: Warning
 }
 
 function Pages(props) {

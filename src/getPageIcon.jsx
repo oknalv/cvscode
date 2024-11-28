@@ -3,7 +3,7 @@ import Icon from "./Icon";
 
 const iconByKey = {
     home: {
-        code:"H",
+        code: "H",
         color: "var(--red)"
     },
     experience: {
@@ -11,20 +11,24 @@ const iconByKey = {
         color: "var(--blue)"
     },
     education: {
-        code:"S",
+        code: "S",
         color: "var(--green)"
     },
     skills: {
-        code:"T",
+        code: "T",
         color: "var(--yellow)"
     },
     contact: {
-        code:"@",
+        code: "@",
         color: "var(--cyan)"
     },
     projects: {
-        code:"P",
+        code: "P",
         color: "var(--magenta)"
+    },
+    warning: {
+        code: "W",
+        color: "var(--warning)"
     }
 }
 

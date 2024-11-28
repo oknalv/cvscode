@@ -17,6 +17,8 @@ const resources = {
 
 const data = await (await fetch(`${homeUrl}data/data.json`)).json();
 
+const isMobile = (await import(`${import.meta.env.VITE_HOME_URL}isMobile.js`)).default;
+
 const fallbackLng = Object.keys(resources);
 if(window.localStorage.getItem("lang") === null) {
     const browserLanguage = navigator.language.split("-")[0];
@@ -37,7 +39,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
         <DataContext.Provider value={data}>
-            <App />
+            <App isMobile={isMobile()}/>
         </DataContext.Provider>
     </React.StrictMode>
 )

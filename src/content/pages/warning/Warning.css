@@ -1,0 +1,9 @@
+.warning-title {
+    font-weight: bold;
+    color: var(--warning);
+    font-size: 2em;
+}
+
+.warning a {
+    color: var(--warning)
+}

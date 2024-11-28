@@ -17,21 +17,17 @@ function Page(props) {
 
     useEffect(() => {
         const observer = new ResizeObserver(() => {
-            
-            if(refContainer.current == null) {
-                debugger;
-            }
             const newMarginBottom = refContainer.current?.clientHeight - props.fontSize[1] || 0;
             if(newMarginBottom !== marginBottom && newMarginBottom > 0) {
                 setMarginBottom(refContainer.current.clientHeight - props.fontSize[1])
             }
-            const newNumbers = ([...Array(Math.floor(refPage.current.clientHeight / props.fontSize[1])).keys()].map(n => n + 1));
+            const newNumbers = ([...Array(Math.floor(refPage.current?.clientHeight / props.fontSize[1]) || 0).keys()].map(n => n + 1));
             if(numbers.length !== newNumbers.length && newNumbers.length !== 0){
                 setNumbers(newNumbers);
             }
-            setIsHorizontalOverflown(refPage.current.scrollWidth > refPage.current.clientWidth);
-            setScrollWidth(refPage.current.scrollWidth);
-            setScrollContainerWidth(refPage.current.clientWidth);
+            setIsHorizontalOverflown(refPage.current?.scrollWidth > refPage.current?.clientWidth);
+            setScrollWidth(refPage.current?.scrollWidth);
+            setScrollContainerWidth(refPage.current?.clientWidth);
         })
         observer.observe(refPage.current);
         setTimeout(() => {

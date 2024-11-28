@@ -26,6 +26,10 @@ function Home({fontSize}) {
             </div>
             <br />
             <div>
+                {t("cvscode_technologies")}
+            </div>
+            <br />
+            <div>
                 {t("vscode")}
             </div>
         </div>

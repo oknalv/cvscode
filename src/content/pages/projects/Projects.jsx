@@ -5,7 +5,7 @@ import DataContext from "../../..";
 
 
 function Projects({fontSize, theme}) {
-    const projects = useContext(DataContext).projects;
+    const projects = useContext(DataContext).projects.filter(p => p.name !== "cvscode");
     return(
         <div className="projects">
             {
