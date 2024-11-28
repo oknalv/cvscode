@@ -8,5 +8,10 @@ export default defineConfig(() => {
       outDir: 'dist',
     },
     plugins: [react()],
+    esbuild: {
+      supported: {
+        'top-level-await': true
+      }
+    }
   };
 });
