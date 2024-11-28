@@ -1,44 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import "./Education.css";
+import DataContext from "../../..";
 
-const education = [
-    {
-        title: "bachelor",
-        years: "2012 - 2016",
-        center: "uvigo"
-    },
-    {
-        title: "associate",
-        years: "2010 - 2012",
-        center: "rodeira"
-    }
-];
-
-const courses = [
-    {
-        title: "angular",
-        year: "2018",
-        center: "vitae"
-    },
-    {
-        title: "scrum",
-        year: "2018",
-        center: "vitae"
-    },
-    {
-        title: "toeic",
-        year: "2017",
-        center: "multimedia"
-    }
-];
 
 function Education(props) {
+    const education = useContext(DataContext).education;
     const { t } = useTranslation();
     return(
         <div className="education">
             {
-                education.map((e, i) => {
+                education.formal.map((e, i) => {
                     return (
                         <div
                             key={`education${i}`}
@@ -58,7 +30,7 @@ function Education(props) {
             <br />
             <div className="edu-2">
             {
-                courses.map((c, i) => {
+                education.courses.map((c, i) => {
                     return (
                         <div
                             key={`education-course${i}`}
@@ -69,7 +41,7 @@ function Education(props) {
                                 <div className="edu-center">{t(c.center)}</div>
                             </div>
                             {
-                                i < courses.length - 1 && <br />
+                                i < education.courses.length - 1 && <br />
                             }
                         </div>
                     )

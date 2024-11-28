@@ -1,22 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useTranslation } from "react-i18next";
 import "./Skills.css";
 import SkillTree from "./SkillTree";
 import PageImg from "../PageImg";
+import DataContext from "../../..";
 
-const technical = {
-    "programming": {
-        "front_end": ["HTML", "CSS", "JavaScript", "Typescript", "Angular", "RxJS", "SASS/SCSS", "Webpack", "React"],
-        "back_end": ["Java", "Python", "JavaScript", "Spring", "OpenAPI", "JMS", "JDBC"],
-        "SQL": ["MySQL", "Sybase ASE"],
-        "transversal": ["Git", "Linux Shell"]
-    },
-    "methodologies": ["Scrum", "Kanban"],
-}
-
-const languages = ["spanish", "galician", "english", "portuguese", "french", "polish", "finnish"]
 
 function Skills({fontSize}) {
+    const skills = useContext(DataContext).skills;
     const { t } = useTranslation();
     return(
         <div className="skills">
@@ -30,12 +21,12 @@ function Skills({fontSize}) {
                 &nbsp;&nbsp;&nbsp;│
             </span>
             <SkillTree
-                skills={technical}
+                skills={skills.technical}
                 titleKey="technical"
                 title={true}
             />
             <SkillTree
-                skills={languages}
+                skills={skills.languages}
                 titleKey="languages"
                 title={true}
                 last={true}

@@ -1,3 +1,4 @@
-#Personal web page
+#CVscode
+My CV in vscode style
 
-[link](https://oknalv.github.io/)
+[link](https://oknalv.github.io/cvscode)

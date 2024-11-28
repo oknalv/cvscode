@@ -7,7 +7,7 @@ import Collapser from "../../../Collapser";
 function Project({project, fontSize, theme}) {
     const { t } = useTranslation();
     const [showProject, setShowProject] = useState(false);
-    const [showScreenshots, setShowScreenshots] = useState(true); //TODO true
+    const [showScreenshots, setShowScreenshots] = useState(false);
     const [showVideo, setShowVideo] = useState(true);
 
     return(
