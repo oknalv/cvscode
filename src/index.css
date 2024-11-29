@@ -15,7 +15,7 @@
     --green: #6dbc89;
     --blue: #569cd6;
     --warning: #dec092;
-    --bar-width: 350px;
+    --sections-width: 300px;
 }
 
 body, html, #root {

@@ -71,6 +71,7 @@ function App({isMobile}) {
                     currentPage={currentPage}
                     theme={theme}
                     setTheme={setTheme}
+                    isMobile={isMobile}
                 />
                 <Content
                     openPages={openPages}

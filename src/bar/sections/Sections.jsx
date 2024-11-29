@@ -5,7 +5,9 @@ import Settings from "./settings/Settings";
 
 function Sections(props) {
     return (
-        <div className="sections">
+        <div
+            className={`sections${props.section === null ? " hide" : ""}`}
+        >
             {
                 props.section === "home" &&
                 <Menu

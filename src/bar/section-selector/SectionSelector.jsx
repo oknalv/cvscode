@@ -10,14 +10,14 @@ function SectionSelector(props) {
                 icon={<Icon icon="F" />}
                 selected={props.selector === "home"}
                 onClick={() => {
-                    props.selectSelector("home")
+                    props.selectSelector(props.selector === "home" ? null : "home")
                 }}
             />
             <SectionSelectorElement
                 icon={<Icon icon="C" />}
                 selected={props.selector === "settings"}
                 onClick={() => {
-                    props.selectSelector("settings")
+                    props.selectSelector(props.selector === "settings" ? null : "settings")
                 }}
             />
         </div>

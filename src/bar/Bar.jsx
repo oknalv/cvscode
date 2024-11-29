@@ -4,7 +4,7 @@ import SectionSelector from "./section-selector/SectionSelector";
 import Sections from "./sections/Sections";
 
 function Bar(props) {
-    const [selector, selectSelector] = useState("home");
+    const [selector, selectSelector] = useState(props.isMobile ? null : "home");
     return (
         <div className="bar">
             <SectionSelector
